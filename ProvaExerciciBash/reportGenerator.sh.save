@@ -1,0 +1,73 @@
+#!/bin/bash
+
+fitxer="informe_sistema.txt"
+
+if [ -f "$fitxer" ]; then
+    echo "El fitxer $fitxer ja existeix."
+    echo "1) Eliminar i tornar a crear"
+    echo "2) Escriure al final"
+    read -p "Escull una opció (1 o 2): " opcio
+
+    case $opcio in
+        1)
+            > "$fitxer"
+            ;;
+        2)
+            echo "" >> "$fitxer"
+            ;;
+        *)
+            echo "Opció no vàlida"
+            exit 1
+            ;;
+    esac
+fi
+
+{
+
+echo "   INFORME DEL SISTEMA"
+} >> "$fitxer"
+
+echo ""
+echo "Quina informació vols veure?"
+echo "a) Informació bàsica del sistema"
+echo "b) Informació de disc i memòria"
+echo "c) Informe complet"
+read -p "Escull una opció (a, b o c): " menu
+
+
+info_sistema() {
+    echo "---- INFORMACIÓ DEL SISTEMA ----"
+    echo "Usuari: $(whoami)"
+    echo "Nom de l'equip: $(hostname)"
+    echo "Kernel: $(uname -r)"
+    echo ""
+}
+
+info_disc_memoria() {
+    echo "---- DISC ----"
+    df -h /
+    echo ""
+    echo "---- MEMÒRIA ----"
+    free -h
+    echo ""
+}
+
+case $menu in
+    a)
+        info_sistema >> "$fitxer"
+        ;;
+    b)
+        info_disc_memoria >> "$FITXER"
+        ;;
+    c)
+        info_sistema >> "$fitxer"
+        info_disc_memoria >> "$fitxer"
+        ;;
+    *)
+        echo "Opció no vàlida"
+        exit 1
+        ;;
+esac
+
+echo "======================================" >> "$fitxer"
+echo "Fitxer generat"

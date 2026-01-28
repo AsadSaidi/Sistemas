@@ -1,0 +1,18 @@
+#!/bin/bash
+
+read -p "Indica el teu nom: " nom
+
+saludar() {
+    if [ $# -eq 2 ]; then
+        echo "Error: Es necessiten 2 parametros"
+	# return 1
+    else
+	echo "Error: Es necessiten 2"
+   fi
+
+    echo "Hola, $1, tens $2 edat"
+}
+
+saludar "$nom" 23
+                                          vtyvguyguyg   
+    b        
