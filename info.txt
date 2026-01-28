@@ -1,3 +1,22 @@
-Aqui tens informació de la data d'avui
-
-dimecres, 14 de gener de 2026, 16:59:02 CET
+Informe generat el: mié 28 ene 2026 17:31:49 CET
+==============================
+Usuari: asadsaidi
+Nom de l'equip: asadsaidi-VirtualBox
+Kernel: 6.8.0-90-generic
+Informe generat el: mié 28 ene 2026 17:31:56 CET
+==============================
+Usuari: asadsaidi
+Nom de l'equip: asadsaidi-VirtualBox
+Kernel: 6.8.0-90-generic
+Disc:
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+tmpfs            392M   1,6M  391M   1% /run
+/dev/sda3         24G    13G   10G  57% /
+tmpfs            2,0G   141M  1,8G   8% /dev/shm
+tmpfs            5,0M   4,0K  5,0M   1% /run/lock
+/dev/sda2        512M   6,1M  506M   2% /boot/efi
+tmpfs            392M   196K  392M   1% /run/user/1000
+Memòria:
+               total       usado       libre  compartido   búf/caché  disponible
+Mem:           3,8Gi       2,1Gi       334Mi       164Mi       1,4Gi       1,4Gi
+Inter:         2,6Gi       363Mi       2,3Gi
