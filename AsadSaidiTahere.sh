@@ -3,9 +3,9 @@
 fitxer="info.txt"
 
 mostrar_menu() {
-    echo "1) Info bàsica del sistema (usuari, nom equip, kernel)"
-    echo "2) Info bàsica de disc i memòria"
-    echo "3) Informe complet (tot junt)"
+    echo "1) Informacio bàsica del sistema"
+    echo "2) Informacio bàsica de disc i memòria"
+    echo "3) Informacio completa (tot)"
 }
 
 if [ -f "$fitxer" ]; then
@@ -16,7 +16,7 @@ else
 fi
 
 echo "Informe generat el: $(date)" >> "$fitxer"
-echo "==============================" >> "$fitxer"
+echo "---------------------------" >> "$fitxer"
 
 mostrar_menu
 read -p "Escull una opció: " opcio
