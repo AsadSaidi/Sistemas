@@ -1,6 +1,4 @@
 #!/bin/bash
-# Script amb menú gràfic utilitzant zenity
-# Nom: ElTeuNom.sh
 
 while true; do
     opcio=$(zenity --list \
@@ -15,7 +13,6 @@ while true; do
         0 "Sortir" \
         --height=400 --width=500)
 
-    # Si l'usuari tanca la finestra
     if [ $? -ne 0 ]; then
         exit 0
     fi
